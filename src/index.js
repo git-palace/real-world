@@ -6,18 +6,18 @@ import { applyMiddleware, createStore } from 'redux';
 import App from './components/App';
 
 const defaultState = {
-  appName : 'conduit',
-  article : null
+  appName: 'conduit',
+  article: null
 }
 
-const reducer = ( state = defaultState, action ) => {
+const reducer = (state = defaultState, action) => {
   return state;
 }
 
-const store = createStore( reducer )
+const store = createStore(reducer)
 
 ReactDOM.render((
-  <Provider>
+  <Provider store={store}>
     <App />
   </Provider>
 ), document.getElementById('root'));
