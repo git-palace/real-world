@@ -1,4 +1,5 @@
 import React from 'react';
+import ArticlePreview from './ArticlePreview'
 
 class ArticleList extends React.Component {
   render() {
@@ -21,7 +22,7 @@ class ArticleList extends React.Component {
         {
           this.props.articles.map(article => {
             return (
-              <h2>{article.title}</h2>
+              <ArticlePreview article={article} key={article.slug.toString()} />
             );
           })
         }
