@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const ArticlePreview = props => {
   const article = props.article;
@@ -47,4 +47,4 @@ const ArticlePreview = props => {
   );
 }
 
-export default ArticlePreview;
+export default ArticlePreview

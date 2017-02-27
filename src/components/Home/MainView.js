@@ -1,7 +1,7 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from 'react'
+import { connect } from 'react-redux'
 
-import ArticleList from '../ArticleList';
+import ArticleList from '../ArticleList'
 
 const mapStateToProps = state => ({
   articles: state.articles
@@ -32,4 +32,4 @@ class MainView extends React.Component {
   }
 }
 
-export default connect(mapStateToProps, () => ({}))(MainView);
+export default connect(mapStateToProps, () => ({}))(MainView)

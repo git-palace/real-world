@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import ArticlePreview from './ArticlePreview'
 
 class ArticleList extends React.Component {
@@ -31,4 +31,4 @@ class ArticleList extends React.Component {
   }
 }
 
-export default ArticleList;
+export default ArticleList

@@ -1,8 +1,9 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import agent from '../../agent';
-import Banner from './Banner';
-import MainView from './MainView';
+import React from 'react'
+import { connect } from 'react-redux'
+
+import agent from '../../agent'
+import Banner from './Banner'
+import MainView from './MainView'
 
 const mapStateToProps = state => ({
   appName: state.appName
@@ -43,4 +44,4 @@ class Home extends React.Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

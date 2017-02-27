@@ -1,8 +1,8 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from 'react'
+import { connect } from 'react-redux'
 
-import Header from './Header';
-import Home from './Home';
+import Header from './Header'
+import Home from './Home'
 
 const mapStateProps = state => ({
   appName: state.appName
@@ -19,4 +19,4 @@ class App extends React.Component {
   }
 }
 
-export default connect(mapStateProps, () => ({}))(App);
+export default connect(mapStateProps, () => ({}))(App)
