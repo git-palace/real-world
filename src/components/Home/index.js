@@ -6,7 +6,7 @@ import Banner from './Banner'
 import MainView from './MainView'
 
 const mapStateToProps = state => ({
-  appName: state.appName
+  appName: state.common.appName
 })
 
 const mapDispatchToProps = dispatch => ({

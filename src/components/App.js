@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import Header from './Header'
 
 const mapStateProps = state => ({
-  appName: state.appName
+  appName: state.common.appName
 })
 
 class App extends React.Component {
