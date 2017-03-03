@@ -7,6 +7,13 @@ const API_ROOT = 'https://conduit.productionready.io/api'
 
 const responseBody = res => res.body
 
+let token = null
+
+let tokenPlugin = req => {
+  if (token)
+    req.set('authorization', `Token ${token}`)
+}
+
 const requests = {
   get: url =>
     superagent.get(`${API_ROOT}${url}`).use(tokenPlugin).then(responseBody),
@@ -24,13 +31,6 @@ const Auth = {
     requests.post('/users/login', { user: { email, password } }),
   current: () =>
     requests.get('/user')
-}
-
-let token = null
-
-let tokenPlugin = req => {
-  if (token)
-    req.set('authorization', `Token ${token}`)
 }
 
 export default {
