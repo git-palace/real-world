@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import agent from '../agent'
 import ListErrors from './ListErrors'
 
-const mapStateToProps = state => ({ ...state })
+const mapStateToProps = state => ({ ...state.auth })
 
 const mapDispatchToProps = dispatch => ({
   onChangeEmail: value =>
@@ -45,7 +45,7 @@ class Login extends React.Component {
 
               <ListErrors errors={this.props.errors} />
 
-              <form onSubmit={this.submitForm}>
+              <form onSubmit={this.submitForm(email, password)}>
                 <fieldset>
                   <fieldset className="form-group">
                     <input
@@ -68,7 +68,7 @@ class Login extends React.Component {
                   <button
                     className="btn btn-lg btn-primary pull-xs-right"
                     type="submit"
-                    disabled={this.props.isProgress}>
+                    disabled={this.props.inProgress}>
                     Sign in
                   </button>
 

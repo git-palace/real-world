@@ -1,5 +1,6 @@
 const promiseMiddleware = store => next => action => {
   if (isPromise(action.payLoad)) {
+    store.dispatch({ type: 'ASYNC_START', subtype: action.type })
     action.payLoad.then(
       res => {
         action.payLoad = res
